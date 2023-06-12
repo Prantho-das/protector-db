@@ -1,0 +1,37 @@
+{
+    "name": "pranthokumar/protect-db",
+    "version": "1.0.0",
+    "description": "database backup system",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Pranthokumar\\ProtectDb\\": "src/",
+            "Pranthokumar\\ProtectDb\\App\\": "src/app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Prantho-das",
+            "email": "pranthokumardas786@gmail.com"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": false
+    },
+    "require": {
+        "php": ">=7.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pranthokumar\\ProtectDb\\ProtectDbProvider"
+            ]
+        },
+        "aliases": {
+            "ProtectDb": "Pranthokumar\\ProtectDb\\App\\Facades\\ProtectDb"
+        }
+    }
+
+}
