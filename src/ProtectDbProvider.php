@@ -47,7 +47,9 @@ class ProtectDbProvider extends ServiceProvider
 
     public function provides()
     {
-        return ['protectdb'];
+        return [
+            'protect-db:protect',
+        ];
     }
 
     protected function registerPublishing()
@@ -69,15 +71,15 @@ class ProtectDbProvider extends ServiceProvider
             $schedule = $this->app->make(Schedule::class);
 
             if (config('protect-db.backup')) {
-                $schedule->command('protect-db:protect');
+
                 if (config('protect-db.time') == 'weakly') {
-                    $schedule->weekly();
+                   $schedule->command('protect-db:protect')->weekly();
                 } elseif (config('protect-db.time') == 'monthly') {
-                    $schedule->monthly();
+                    $schedule->command('protect-db:protect')->monthly();
                 } elseif (config('protect-db.time') == 'daily') {
-                    $schedule->daily();
+                    $schedule->command('protect-db:protect')->daily();
                 } elseif (config('protect-db.time') == 'hourly') {
-                    $schedule->hourly();
+                    $schedule->command('protect-db:protect')->hourly();
                 }
 
             }
