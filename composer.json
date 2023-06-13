@@ -1,35 +1,36 @@
 {
-    "name": "pranthokumar/protect-db",
-    "description": "database backup system",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Pranthokumar\\ProtectDb\\": "src/",
-            "Pranthokumar\\ProtectDb\\App\\": "src/app/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Prantho-das",
-            "email": "pranthokumardas786@gmail.com"
-        }
-    ],
-    "config": {
-        "optimize-autoloader": true
-    },
-    "require": {
-        "php": ">=7.2"
-    },"minimum-stability": "dev",
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Pranthokumar\\ProtectDb\\ProtectDbProvider"
-            ]
-        },
-        "aliases": {
-            "ProtectDb": "Pranthokumar\\ProtectDb\\App\\Facades\\ProtectDb"
-        }
+  "name": "pranthokumar/protect-db",
+  "description": "database backup system",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Pranthokumar\\ProtectDb\\": "src/",
+      "Pranthokumar\\ProtectDb\\App\\": "src/app/"
     }
-
+  },
+  "authors": [
+    {
+      "name": "Prantho-das",
+      "email": "pranthokumardas786@gmail.com"
+    }
+  ],
+  "config": {
+    "optimize-autoloader": true
+  },
+  "require": {
+    "php": ">=7.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pranthokumar\\ProtectDb\\ProtectDbProvider"
+      ]
+    },
+    "aliases": {
+      "ProtectDb": "Pranthokumar\\ProtectDb\\App\\Facades\\ProtectDb"
+    }
+  }
 }
