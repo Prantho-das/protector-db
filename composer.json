@@ -1,6 +1,5 @@
 {
     "name": "pranthokumar/protect-db",
-    "version": "1.0.0",
     "description": "database backup system",
     "type": "library",
     "license": "MIT",
