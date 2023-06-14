@@ -19,7 +19,7 @@ composer require pranthokumar/protect-db
 ```
 
 ## How To Work
-``
+```sh
 route---- /protect-db
 comm ---- php artisan protect-db:protect
 config---- weakly setup
@@ -29,7 +29,7 @@ PROTECT_DB_ROUTE_PREFIX=protect
 PROTECT_DB_TIME='weekly'
 PROTECT_DB_BACKUP=true
 
-``
+```
 
 `
 1.model= Your Already Created Model Name
